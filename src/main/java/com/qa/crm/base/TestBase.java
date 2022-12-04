@@ -52,9 +52,10 @@ public class TestBase {
       }
       driver.manage().window().maximize();
       driver.manage().deleteAllCookies();
-      driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_Load_Timeout,TimeUnit.SECONDS);
-      driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+     // driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_Load_Timeout,TimeUnit.SECONDS);
       driver.get(prop.getProperty("url"));
+      driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+
 
 
 
